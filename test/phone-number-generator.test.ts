@@ -3,7 +3,7 @@ import { countryPhoneDataArray } from "../src/countryPhoneData";
 import { generatePhoneNumber } from "../src/index";
 
 describe("generatePhoneNumber", () => {
-  it.each(Array.from(Array(400)))(
+  it.each(Array.from(Array(100000)))(
     "Should succeed generating phone number %s",
     () => {
       expect(isValidPhoneNumber(generatePhoneNumber())).toBeTruthy();
