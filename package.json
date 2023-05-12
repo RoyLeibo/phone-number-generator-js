@@ -1,7 +1,7 @@
 {
-  "name": "example-typescript-package",
-  "version": "0.2.2",
-  "description": "",
+  "name": "phone-number-generator",
+  "version": "1.0.0",
+  "description": "Generates a random function following the E164 phone number standard",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "umd:main": "dist/umd/index.js",
@@ -40,34 +40,37 @@
     "esm",
     "umd"
   ],
-  "author": "Tom Chen <tomchen.org@gmail.com>",
-  "license": "MIT",
-  "homepage": "https://github.com/tomchen/example-typescript-package",
   "repository": {
     "type": "git",
-    "url": "git@github.com:tomchen/example-typescript-package.git"
+    "url": "git+https://github.com/RoyLeibo/phone-number-generator.git"
   },
+  "author": "Roy Leibovitz",
   "bugs": {
-    "url": "https://github.com/tomchen/example-typescript-package/issues"
+    "url": "https://github.com/RoyLeibo/phone-number-generator/issues"
   },
-  "dependencies": {},
+  "homepage": "https://github.com/RoyLeibo/phone-number-generator#readme",
+  "dependencies": {
+    "libphonenumber-js": "1.10.30",
+    "lodash": "4.17.21"
+  },
   "devDependencies": {
-    "@commitlint/cli": "^13.1.0",
-    "@commitlint/config-conventional": "^13.1.0",
-    "@types/jest": "^27.0.1",
-    "@typescript-eslint/eslint-plugin": "^4.31.1",
-    "@typescript-eslint/parser": "^4.31.1",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "husky": "^7.0.2",
-    "jest": "^27.2.0",
-    "pinst": "^2.1.6",
-    "prettier": "^2.4.0",
-    "ts-jest": "^27.0.5",
-    "ts-loader": "^9.2.5",
-    "typescript": "^4.4.3",
-    "webpack": "^5.52.1",
-    "webpack-cli": "^4.8.0"
+    "@commitlint/cli": "13.1.0",
+    "@commitlint/config-conventional": "13.1.0",
+    "@types/jest": "27.0.1",
+    "@types/lodash": "4.14.194",
+    "@typescript-eslint/eslint-plugin": "4.31.1",
+    "@typescript-eslint/parser": "4.31.1",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "husky": "7.0.2",
+    "jest": "27.2.0",
+    "pinst": "2.1.6",
+    "prettier": "2.4.0",
+    "ts-jest": "27.0.5",
+    "ts-loader": "9.2.5",
+    "typescript": "4.4.3",
+    "webpack": "5.82.1",
+    "webpack-cli": "4.8.0"
   }
 }

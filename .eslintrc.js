@@ -7,5 +7,5 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
   },
-  plugins: ['@typescript-eslint', 'prettier'],
+  plugins: ['@nrwl/nx'],
 }
