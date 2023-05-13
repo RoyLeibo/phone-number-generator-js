@@ -1,5 +1,5 @@
 {
-  "name": "phone-number-generator",
+  "name": "@royleibo/phone-number-generator",
   "version": "1.0.0",
   "description": "Generates a random function following the E164 phone number standard",
   "main": "dist/cjs/index.js",
@@ -36,6 +36,7 @@
     "esm",
     "umd"
   ],
+  "addscope": "@RoyLeibo",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RoyLeibo/phone-number-generator.git"
