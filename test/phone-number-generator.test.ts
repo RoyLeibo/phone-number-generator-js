@@ -46,4 +46,31 @@ describe("generatePhoneNumber", () => {
       expect(isValidPhoneNumber(phoneNumber)).toBeTruthy();
     }
   );
+
+  it("Should throw error when country code doesn't match county name", () => {
+    expect(() =>
+      generatePhoneNumber({
+        countryCode: "1",
+        countryName: "Austria",
+      })
+    ).toThrowError();
+  });
+
+  it("Should throw error when country code doesn't match county tag", () => {
+    expect(() =>
+      generatePhoneNumber({
+        countryCode: "1",
+        countryTag3: "AUS",
+      })
+    ).toThrowError();
+  });
+
+  it("Should throw error when country name doesn't match county tag", () => {
+    expect(() =>
+      generatePhoneNumber({
+        countryName: "Austria",
+        countryTag3: "X",
+      })
+    ).toThrowError();
+  });
 });

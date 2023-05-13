@@ -11,14 +11,21 @@ export class CountryPhoneDataConfig {
 export default function generatePhoneNumber(
   config?: CountryPhoneDataConfig
 ): string {
-  const countryPhoneData: CountryPhoneData =
-    getCountryPhoneDataByConfig(config);
-  let phoneNumber: string;
-  do {
-    phoneNumber = getRandomPhoneNumber(countryPhoneData);
-  } while (!isValidPhoneNumber(phoneNumber));
+  for (let i = 0; i < 100; i++) {
+    const countryPhoneData: CountryPhoneData =
+      getCountryPhoneDataByConfig(config);
+    for (let j = 0; j < 100; j++) {
+      const phoneNumber = getRandomPhoneNumber(countryPhoneData);
+      if (isValidPhoneNumber(phoneNumber)) {
+        return phoneNumber;
+      }
+    }
+    if (config) {
+      break;
+    }
+  }
 
-  return phoneNumber;
+  throw new Error("Failed to generate phone number");
 }
 
 function getRandomPhoneNumber(countryPhoneData: CountryPhoneData): string {
