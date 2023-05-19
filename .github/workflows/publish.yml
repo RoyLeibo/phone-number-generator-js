@@ -1,5 +1,7 @@
 name: Release & Publish
 
+permissions: write-all
+
 on:
   push:
     tags:
