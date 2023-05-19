@@ -1,5 +1,5 @@
 {
-  "name": "@royleibo/phone-number-generator",
+  "name": "phone-number-generator",
   "version": "1.0.0",
   "description": "Generates a random function following the E164 phone number standard",
   "main": "dist/cjs/index.js",
@@ -18,8 +18,7 @@
     "clean": "node tools/cleanup",
     "package": "npm run build && npm pack",
     "test": "jest --no-cache --runInBand",
-    "test:cov": "jest --coverage --no-cache --runInBand",
-    "addscope": "node tools/packagejson name @royleibo/example-typescript-package"
+    "test:cov": "jest --coverage --no-cache --runInBand"
   },
   "publishConfig": {
     "access": "public"
