@@ -77,13 +77,13 @@ generatePhoneNumber({
 ## Test
 
 ```
-yarn test
+npm test
 ```
 
 ## Build
 
 ```
-yarn build
+npm build
 ```
 
 ## Credits
