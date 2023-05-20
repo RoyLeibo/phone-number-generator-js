@@ -25,7 +25,7 @@ export default function generatePhoneNumber(
   throw new Error("Failed to generate phone number");
 }
 
-function getRandomPhoneNumber(countryPhoneData: CountryPhoneData, withoutCountryCode: boolean = true): string {
+function getRandomPhoneNumber(countryPhoneData: CountryPhoneData, withoutCountryCode: boolean = false): string {
   const randomMobileBeginWith: string =
     sample(countryPhoneData.mobile_begin_with) ?? "";
 

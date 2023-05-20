@@ -7,7 +7,11 @@ describe("generatePhoneNumber", () => {
   it.each(Array.from(Array(100000)))(
     "Should succeed generating phone number",
     () => {
-      expect(isValidPhoneNumber(generatePhoneNumber())).toBeTruthy();
+      const startTime = Date.now();
+      const phoneNumber = generatePhoneNumber();
+      const endTime = Date.now();
+      expect(isValidPhoneNumber(phoneNumber)).toBeTruthy();
+      expect(endTime - startTime).toBeLessThan(100);
     }
   );
 

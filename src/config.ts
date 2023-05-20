@@ -1,6 +1,6 @@
 export class CountryPhoneDataConfig {
     countryName?: CountryNames;
-    withoutCountryCode?: boolean = false;
+    withoutCountryCode?: boolean;
 }
 
 export enum CountryNames {
