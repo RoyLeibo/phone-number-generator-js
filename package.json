@@ -1,5 +1,5 @@
 {
-  "name": "phone-number-generator",
+  "name": "phone-number-generator-js",
   "version": "1.0.0",
   "description": "Generates a random function following the E164 phone number standard",
   "main": "dist/cjs/index.js",
@@ -7,7 +7,7 @@
   "umd:main": "dist/umd/index.js",
   "types": "dist/types/index.d.js",
   "scripts": {
-    "postinstall": "husky install",
+    "_postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable",
     "build": "npm run build:cjs && npm run build:esm && npm run build:umd && npm run build:types",
@@ -42,13 +42,13 @@
   "addscope": "@RoyLeibo",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RoyLeibo/phone-number-generator.git"
+    "url": "git+https://github.com/RoyLeibo/phone-number-generator-js.git"
   },
   "author": "Roy Leibovitz",
   "bugs": {
-    "url": "https://github.com/RoyLeibo/phone-number-generator/issues"
+    "url": "https://github.com/RoyLeibo/phone-number-generator-js/issues"
   },
-  "homepage": "https://github.com/RoyLeibo/phone-number-generator#readme",
+  "homepage": "https://github.com/RoyLeibo/phone-number-generator-js#readme",
   "dependencies": {
     "libphonenumber-js": "1.10.30",
     "lodash": "4.17.21"

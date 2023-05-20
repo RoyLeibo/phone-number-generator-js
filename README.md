@@ -13,21 +13,21 @@ Relevant links:
 ## Install
 
 ```
-npm install phone-number-generator
+npm install phone-number-generator-js
 
 // or
 
-yarn add phone-number-generator
+yarn add phone-number-generator-js
 ```
 
 ## Usage
 
 ```javascript
-const { phoneNumberGenerator } = require("phone-number-generator");
+const { phoneNumberGenerator } = require("phone-number-generator-js");
 
 // or
 
-import { phoneNumberGenerator } from "phone-number-generator";
+import { phoneNumberGenerator } from "phone-number-generator-js";
 ```
 
 ### 1. Simple usage
