@@ -1,20 +1,21 @@
-import { isValidPhoneNumber } from "libphonenumber-js";
+import { CountryCode, isValidNumberForRegion, isValidPhoneNumber } from "libphonenumber-js";
+import { CountryNames } from "../src/config";
 import { countryPhoneDataArray } from "../src/countryPhoneData";
 import { generatePhoneNumber } from "../src/index";
 
 describe("generatePhoneNumber", () => {
   it.each(Array.from(Array(100000)))(
-    "Should succeed generating phone number %s",
+    "Should succeed generating phone number",
     () => {
       expect(isValidPhoneNumber(generatePhoneNumber())).toBeTruthy();
     }
   );
 
   it.each(countryPhoneDataArray)(
-    "Should succeed generating phone number with country code: %s",
+    "Should succeed generating phone number with country name: $country_name",
     (countryPhoneData) => {
       const phoneNumber = generatePhoneNumber({
-        countryCode: countryPhoneData.country_code,
+        countryName: countryPhoneData.country_name as CountryNames,
       });
       expect(
         phoneNumber.startsWith(`+${countryPhoneData.country_code}`)
@@ -23,54 +24,30 @@ describe("generatePhoneNumber", () => {
     }
   );
 
-  it.each(countryPhoneDataArray)(
-    "Should succeed generating phone number with country name: %s",
-    (countryPhoneData) => {
-      const phoneNumber = generatePhoneNumber({
-        countryName: countryPhoneData.country_name,
-      });
-      expect(
-        phoneNumber.startsWith(`+${countryPhoneData.country_code}`)
-      ).toBeTruthy();
-      expect(isValidPhoneNumber(phoneNumber)).toBeTruthy();
-    }
-  );
-
-  it.each(countryPhoneDataArray)(
-    "Should succeed generating phone number with country tag: %s",
-    (countryPhoneData) => {
-      const phoneNumber = generatePhoneNumber({
-        countryTag3: countryPhoneData.alpha3,
-      });
-      expect(phoneNumber.includes(countryPhoneData.country_code)).toBeTruthy();
-      expect(isValidPhoneNumber(phoneNumber)).toBeTruthy();
-    }
-  );
-
-  it("Should throw error when country code doesn't match county name", () => {
+  it("Should throw error for not existing country name", () => {
     expect(() =>
+
       generatePhoneNumber({
-        countryCode: "1",
-        countryName: "Austria",
+        countryName: 'SSS' as CountryNames,
       })
     ).toThrowError();
   });
 
-  it("Should throw error when country code doesn't match county tag", () => {
-    expect(() =>
-      generatePhoneNumber({
-        countryCode: "1",
-        countryTag3: "AUS",
-      })
-    ).toThrowError();
+  it("Should create phone number with country code", () => {
+    const phoneNumber = generatePhoneNumber({
+      countryName: CountryNames.Austria
+    });
+    expect(phoneNumber.startsWith("+43")).toBeTruthy();
+    expect(isValidPhoneNumber(phoneNumber)).toBeTruthy();
   });
 
-  it("Should throw error when country name doesn't match county tag", () => {
-    expect(() =>
-      generatePhoneNumber({
-        countryName: "Austria",
-        countryTag3: "X",
-      })
-    ).toThrowError();
+  it("Should create phone number without country code", () => {
+
+    const phoneNumber = generatePhoneNumber({
+      countryName: CountryNames.Austria,
+      withoutCountryCode: true
+    });
+    expect(phoneNumber.startsWith('+43')).toBeFalsy();
+    expect(isValidNumberForRegion(phoneNumber, 'AT' as CountryCode)).toBeTruthy();
   });
 });

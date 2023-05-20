@@ -1,12 +1,9 @@
-import { isValidPhoneNumber } from "libphonenumber-js";
+import { CountryCode, isValidNumberForRegion, isValidPhoneNumber } from "libphonenumber-js";
 import { random, sample } from "lodash";
+import { CountryPhoneDataConfig } from "./config";
 import { CountryPhoneData, countryPhoneDataArray } from "./countryPhoneData";
 
-export class CountryPhoneDataConfig {
-  countryTag3?: string;
-  countryName?: string;
-  countryCode?: string;
-}
+
 
 export default function generatePhoneNumber(
   config?: CountryPhoneDataConfig
@@ -15,8 +12,8 @@ export default function generatePhoneNumber(
     const countryPhoneData: CountryPhoneData =
       getCountryPhoneDataByConfig(config);
     for (let j = 0; j < 100; j++) {
-      const phoneNumber = getRandomPhoneNumber(countryPhoneData);
-      if (isValidPhoneNumber(phoneNumber)) {
+      const phoneNumber = getRandomPhoneNumber(countryPhoneData, config?.withoutCountryCode);
+      if (config?.withoutCountryCode ? isValidNumberForRegion(phoneNumber, countryPhoneData.alpha2 as CountryCode) : isValidPhoneNumber(phoneNumber)) {
         return phoneNumber;
       }
     }
@@ -28,7 +25,7 @@ export default function generatePhoneNumber(
   throw new Error("Failed to generate phone number");
 }
 
-function getRandomPhoneNumber(countryPhoneData: CountryPhoneData): string {
+function getRandomPhoneNumber(countryPhoneData: CountryPhoneData, withoutCountryCode: boolean = true): string {
   const randomMobileBeginWith: string =
     sample(countryPhoneData.mobile_begin_with) ?? "";
 
@@ -36,7 +33,7 @@ function getRandomPhoneNumber(countryPhoneData: CountryPhoneData): string {
     countryPhoneData.phone_number_lengths[0] - randomMobileBeginWith.length
   );
 
-  return `+${countryPhoneData.country_code}${randomMobileBeginWith}${randomPhoneNumberSuffix}`;
+  return `${withoutCountryCode ? '' : '+' + countryPhoneData.country_code}${randomMobileBeginWith}${randomPhoneNumberSuffix}`;
 }
 
 function getRandomPhoneNumberSuffix(phoneNumberLength: number): string {
@@ -53,54 +50,18 @@ function getCountryPhoneDataByConfig(
   config: CountryPhoneDataConfig = {}
 ): CountryPhoneData {
   let countryPhoneData!: CountryPhoneData;
-  const { countryTag3, countryName, countryCode } = config;
 
-  if (!config || (!countryTag3 && !countryName && !countryCode)) {
+  if (!config || !config.countryName) {
     countryPhoneData = sample(countryPhoneDataArray)!;
   } else {
-    if (countryTag3) {
-      countryPhoneData =
-        countryPhoneDataArray.find(
-          (countryPhoneData) => countryPhoneData.alpha3 === countryTag3
-        ) ?? throwError("tag");
-      validateCountryPhoneData(countryPhoneData, config);
-    }
-    if (countryName) {
-      countryPhoneData =
-        countryPhoneDataArray.find(
-          (countryPhoneData) => countryPhoneData.country_name === countryName
-        ) ?? throwError("name");
-      validateCountryPhoneData(countryPhoneData, config);
-    }
-    if (countryCode) {
-      countryPhoneData =
-        countryPhoneDataArray.find(
-          (countryPhoneData) => countryPhoneData.country_code === countryCode
-        ) ?? throwError("code");
-      validateCountryPhoneData;
-    }
+    countryPhoneData =
+      countryPhoneDataArray.find(
+        (countryPhoneData) => countryPhoneData.country_name === config.countryName
+      ) ?? (() => {
+        throw new Error(`Invalid country name`);
+      })();
+
   }
 
   return countryPhoneData;
-}
-
-function validateCountryPhoneData(
-  countryPhoneData: CountryPhoneData,
-  { countryTag3, countryName, countryCode }: CountryPhoneDataConfig
-): void {
-  if (countryTag3 && countryPhoneData.alpha3 !== countryTag3) {
-    throw new Error("Invalid country tag");
-  }
-  if (countryName && countryPhoneData.country_name !== countryName) {
-    throw new Error("Invalid country name");
-  }
-  if (countryCode && countryPhoneData.country_code !== countryCode) {
-    throw new Error("Invalid country code");
-  }
-}
-
-function throwError(invalidField: string): CountryPhoneData {
-  return (() => {
-    throw new Error(`Invalid country ${invalidField}`);
-  })();
 }

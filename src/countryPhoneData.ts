@@ -1107,7 +1107,6 @@ export const countryPhoneDataArray: CountryPhoneData[] = [
     mobile_begin_with: ["5", "7"],
     phone_number_lengths: [9],
   },
-  // {alpha2: "GG", alpha3: "GGY", country_code: "44", country_name: "Guernsey", mobile_begin_with: [], phone_number_lengths: []},
   {
     alpha2: "GH",
     alpha3: "GHA",
@@ -1246,7 +1245,6 @@ export const countryPhoneDataArray: CountryPhoneData[] = [
     ],
     phone_number_lengths: [8],
   },
-  // {alpha2: "HM", alpha3: "HMD", country_code: "", country_name: "Heard and McDonald Islands", mobile_begin_with: [], phone_number_lengths: []},
   {
     alpha2: "HN",
     alpha3: "HND",
@@ -1287,7 +1285,6 @@ export const countryPhoneDataArray: CountryPhoneData[] = [
     mobile_begin_with: ["8"],
     phone_number_lengths: [9, 10, 11, 12],
   },
-  // {alpha2: "IM", alpha3: "IMN", country_code: "44", country_name: "Isle of Man", mobile_begin_with: [], phone_number_lengths: []},
   {
     alpha2: "IN",
     alpha3: "IND",
@@ -1296,7 +1293,6 @@ export const countryPhoneDataArray: CountryPhoneData[] = [
     mobile_begin_with: ["6", "7", "8", "9"],
     phone_number_lengths: [10],
   },
-  // {alpha2: "IO", alpha3: "IOT", country_code: "246", country_name: "British Indian Ocean Territory", mobile_begin_with: [], phone_number_lengths: []},
   {
     alpha2: "IE",
     alpha3: "IRL",
@@ -1353,7 +1349,6 @@ export const countryPhoneDataArray: CountryPhoneData[] = [
     mobile_begin_with: ["876"],
     phone_number_lengths: [10],
   },
-  // {alpha2: "JE", alpha3: "JEY", country_code: "44", country_name: "Jersey", mobile_begin_with: [], phone_number_lengths: []},
   {
     alpha2: "JO",
     alpha3: "JOR",
@@ -1530,7 +1525,6 @@ export const countryPhoneDataArray: CountryPhoneData[] = [
     mobile_begin_with: ["6"],
     phone_number_lengths: [8],
   },
-  // {alpha2: "MF", alpha3: "MAF", country_code: "590", country_name: "Saint Martin", mobile_begin_with: [], phone_number_lengths: []},
   {
     alpha2: "MA",
     alpha3: "MAR",
@@ -1827,7 +1821,6 @@ export const countryPhoneDataArray: CountryPhoneData[] = [
     mobile_begin_with: ["6"],
     phone_number_lengths: [8],
   },
-  // {alpha2: "PN", alpha3: "PCN", country_code: "", country_name: "Pitcairn", mobile_begin_with: [], phone_number_lengths: []},
   {
     alpha2: "PE",
     alpha3: "PER",
@@ -1876,7 +1869,6 @@ export const countryPhoneDataArray: CountryPhoneData[] = [
     mobile_begin_with: ["787", "939"],
     phone_number_lengths: [10],
   },
-  // {alpha2: "KP", alpha3: "PRK", country_code: "850", country_name: "Korea, Democratic People's Republic Of", mobile_begin_with: [], phone_number_lengths: []},
   {
     alpha2: "PT",
     alpha3: "PRT",
@@ -1988,15 +1980,6 @@ export const countryPhoneDataArray: CountryPhoneData[] = [
     country_name: "Singapore",
     mobile_begin_with: ["8", "9"],
     phone_number_lengths: [8],
-  },
-  // {alpha2: "GS", alpha3: "SGS", country_code: "500", country_name: "South Georgia and the South Sandwich Islands", mobile_begin_with: [], phone_number_lengths: []},
-  {
-    alpha2: "SH",
-    alpha3: "SHN",
-    country_code: "290",
-    country_name: "Saint Helena",
-    mobile_begin_with: [],
-    phone_number_lengths: [4],
   },
   {
     alpha2: "SJ",
@@ -2117,7 +2100,6 @@ export const countryPhoneDataArray: CountryPhoneData[] = [
     mobile_begin_with: ["7"],
     phone_number_lengths: [9],
   },
-  // {alpha2: "SZ", alpha3: "SWZ", country_code: "268", country_name: "Swaziland", mobile_begin_with: [], phone_number_lengths: []},
   {
     alpha2: "SC",
     alpha3: "SYC",
@@ -2271,7 +2253,6 @@ export const countryPhoneDataArray: CountryPhoneData[] = [
     mobile_begin_with: ["39", "50", "63", "66", "67", "68", "73", "9"],
     phone_number_lengths: [9],
   },
-  // {alpha2: "UM", alpha3: "UMI", country_code: "", country_name: "United States Minor Outlying Islands", mobile_begin_with: [], phone_number_lengths: []},
   {
     alpha2: "UY",
     alpha3: "URY",
@@ -2288,7 +2269,6 @@ export const countryPhoneDataArray: CountryPhoneData[] = [
     mobile_begin_with: ["9", "88", "33"],
     phone_number_lengths: [9],
   },
-  // {alpha2: "VA", alpha3: "VAT", country_code: "39", country_name: "Holy See (Vatican City State)", mobile_begin_with: [], phone_number_lengths: []},
   {
     alpha2: "VC",
     alpha3: "VCT",
