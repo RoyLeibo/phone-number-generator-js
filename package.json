@@ -1,11 +1,11 @@
 {
   "name": "phone-number-generator-js",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Generates a random phone number following the E.164 international standard",
-  "main": "dist/cjs/index.ts",
-  "module": "dist/esm/index.ts",
-  "umd:main": "dist/umd/index.ts",
-  "types": "dist/types/index.d.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "umd:main": "dist/umd/index.js",
+  "types": "dist/types/index.d.js",
   "scripts": {
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
