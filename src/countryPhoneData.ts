@@ -1886,14 +1886,6 @@ export const countryPhoneDataArray: CountryPhoneData[] = [
     phone_number_lengths: [9],
   },
   {
-    alpha2: "PS",
-    alpha3: "PSE",
-    country_code: "970",
-    country_name: "Palestinian Territory, Occupied",
-    mobile_begin_with: ["5"],
-    phone_number_lengths: [9],
-  },
-  {
     alpha2: "PF",
     alpha3: "PYF",
     country_code: "689",
