@@ -10,8 +10,6 @@ It supports a wide range of countries, with a total of 227 supported countries, 
 
 By default, if no configuration is provided, a totally random phone number will be generated from any of the 226 supported countries.
 
-
-
 ### Relevant links:
 
 - [E.164 format definition](https://en.wikipedia.org/wiki/E.164)
@@ -31,11 +29,11 @@ yarn add phone-number-generator-js
 ## Usage
 
 ```javascript
-const { phoneNumberGenerator } = require("phone-number-generator-js");
+const { generatePhoneNumber } = require("phone-number-generator-js");
 
 // or
 
-import { phoneNumberGenerator } from "phone-number-generator-js";
+import { generatePhoneNumber } from "phone-number-generator-js";
 ```
 
 ### 1. Simple usage

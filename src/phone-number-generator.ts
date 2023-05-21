@@ -3,8 +3,6 @@ import { random, sample } from "lodash";
 import { CountryPhoneDataConfig } from "./config";
 import { CountryPhoneData, countryPhoneDataArray } from "./countryPhoneData";
 
-
-
 export default function generatePhoneNumber(
   config?: CountryPhoneDataConfig
 ): string {
