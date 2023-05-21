@@ -39,6 +39,7 @@
     "esm",
     "umd"
   ],
+  "license": "MIT",
   "addscope": "@RoyLeibo",
   "repository": {
     "type": "git",
