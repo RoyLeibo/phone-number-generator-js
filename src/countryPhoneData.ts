@@ -162,7 +162,6 @@ export const countryPhoneDataArray: CountryPhoneData[] = [
       "540",
       "541",
       "551",
-      "557",
       "559",
       "561",
       "562",
