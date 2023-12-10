@@ -78,66 +78,66 @@ yarn build
 
 ## Supported countries:
 
-| Countries           |||                                  |
-| ----------|--|--|----------------------------------------|
-| Afghanistan 🇦🇫 | Albania 🇦🇱 | Algeria 🇩🇿 | American Samoa 🇦🇸 |
-| Andorra 🇦🇩 | Angola 🇦🇴 | Anguilla 🇦🇮 | Antigua and Barbuda 🇦🇬 |
-| Argentina 🇦🇷 | Armenia 🇦🇲 | Aruba 🇦🇼 | Australia 🇦🇺 |
-| Austria 🇦🇹 | Azerbaijan 🇦🇿 | Bahamas 🇧🇸 | Bahrain 🇧🇭 |
-| Bangladesh 🇧🇩 | Barbados 🇧🇧 | Belarus 🇧🇾 | Belgium 🇧🇪 |
-| Belize 🇧🇿 | Benin 🇧🇯 | Bermuda 🇧🇲 | Bhutan 🇧🇹 |
-| Bolivia 🇧🇴 | Bosnia and Herzegovina 🇧🇦 | Botswana 🇧🇼 | Brazil 🇧🇷 |
-| British Virgin Islands 🇻🇬 | Brunei Darussalam 🇧🇳 | Bulgaria 🇧🇬 | Burkina Faso 🇧🇫 |
-| Burundi 🇧🇮 | Cambodia 🇰🇭 | Cameroon 🇨🇲 | Canada 🇨🇦 |
-| Cape Verde 🇨🇻 | Cayman Islands 🇰🇾 | Central African Republic 🇨🇫 | Chad 🇹🇩 |
-| Chile 🇨🇱 | China 🇨🇳 | Colombia 🇨🇴 | Comoros 🇰🇲 |
-| Congo 🇨🇩 | Cook Islands 🇨🇰 | Costa Rica 🇨🇷 | Côte D'Ivoire 🇨🇮 |
-| Croatia 🇭🇷 | Cuba 🇨🇺 | Curaçao 🇨🇼 | Cyprus 🇨🇾 |
-| Czech Republic 🇨🇿 | Democratic Republic of the Congo 🇨🇩 | Denmark 🇩🇰 | Djibouti 🇩🇯 |
-| Dominica 🇩🇲 | Dominican Republic 🇩🇴 | East Timor 🇹🇱 | Ecuador 🇪🇨 |
-| Egypt 🇪🇬 | El Salvador 🇸🇻 | Equatorial Guinea 🇬🇶 | Eritrea 🇪🇷 |
-| Estonia 🇪🇪 | Eswatini 🇸🇿 | Ethiopia 🇪🇹 | Falkland Islands (Malvinas) 🇫🇰 |
-| Faroe Islands 🇫🇴 | Fiji 🇫🇯 | Finland 🇫🇮 | France 🇫🇷 |
-| French Guiana 🇬🇫 | French Polynesia 🇵🇫 | Gabon 🇬🇦 | Gambia 🇬🇲 |
-| Georgia 🇬🇪 | Germany 🇩🇪 | Ghana 🇬🇭 | Gibraltar 🇬🇮 |
-| Greece 🇬🇷 | Greenland 🇬🇱 | Grenada 🇬🇩 | Guadeloupe 🇬🇵 |
-| Guam 🇬🇺 | Guatemala 🇬🇹 | Guinea 🇬🇳 | Guinea-Bissau 🇬🇼 |
-| Guyana 🇬🇾 | Haiti 🇭🇹 | Honduras 🇭🇳 | Hong Kong 🇭🇰 |
-| Hungary 🇭🇺 | Iceland 🇮🇸 | India 🇮🇳 | Indonesia 🇮🇩 |
-| Iran 🇮🇷 | Iraq 🇮🇶 | Ireland 🇮🇪 | Israel 🇮🇱 |
-| Italy 🇮🇹 | Jamaica 🇯🇲 | Japan 🇯🇵 | Jordan 🇯🇴 |
-| Kazakhstan 🇰🇿 | Kenya 🇰🇪 | Kiribati 🇰🇮 | Korea, Republic of 🇰🇷 |
-| Kuwait 🇰🇼 | Kyrgyzstan 🇰🇬 | Lao People's Democratic Republic 🇱🇦 | Latvia 🇱🇻 |
-| Lebanon 🇱🇧 | Lesotho 🇱🇸 | Liberia 🇱🇷 | Libya 🇱🇾 |
-| Liechtenstein 🇱🇮 | Lithuania 🇱🇹 | Luxembourg 🇱🇺 | Macao 🇲🇴 |
+| Countries                                       |||                                  |
+|-------------------------------------------------|--|--|----------------------------------------|
+| Afghanistan 🇦🇫                                | Albania 🇦🇱 | Algeria 🇩🇿 | American Samoa 🇦🇸 |
+| Andorra 🇦🇩                                    | Angola 🇦🇴 | Anguilla 🇦🇮 | Antigua and Barbuda 🇦🇬 |
+| Argentina 🇦🇷                                  | Armenia 🇦🇲 | Aruba 🇦🇼 | Australia 🇦🇺 |
+| Austria 🇦🇹                                    | Azerbaijan 🇦🇿 | Bahamas 🇧🇸 | Bahrain 🇧🇭 |
+| Bangladesh 🇧🇩                                 | Barbados 🇧🇧 | Belarus 🇧🇾 | Belgium 🇧🇪 |
+| Belize 🇧🇿                                     | Benin 🇧🇯 | Bermuda 🇧🇲 | Bhutan 🇧🇹 |
+| Bolivia 🇧🇴                                    | Bosnia and Herzegovina 🇧🇦 | Botswana 🇧🇼 | Brazil 🇧🇷 |
+| British Virgin Islands 🇻🇬                     | Brunei Darussalam 🇧🇳 | Bulgaria 🇧🇬 | Burkina Faso 🇧🇫 |
+| Burundi 🇧🇮                                    | Cambodia 🇰🇭 | Cameroon 🇨🇲 | Canada 🇨🇦 |
+| Cape Verde 🇨🇻                                 | Cayman Islands 🇰🇾 | Central African Republic 🇨🇫 | Chad 🇹🇩 |
+| Chile 🇨🇱                                      | China 🇨🇳 | Colombia 🇨🇴 | Comoros 🇰🇲 |
+| Congo 🇨🇩                                      | Cook Islands 🇨🇰 | Costa Rica 🇨🇷 | Côte D'Ivoire 🇨🇮 |
+| Croatia 🇭🇷                                    | Cuba 🇨🇺 | Curaçao 🇨🇼 | Cyprus 🇨🇾 |
+| Czech Republic 🇨🇿                             | Democratic Republic of the Congo 🇨🇩 | Denmark 🇩🇰 | Djibouti 🇩🇯 |
+| Dominica 🇩🇲                                   | Dominican Republic 🇩🇴 | East Timor 🇹🇱 | Ecuador 🇪🇨 |
+| Egypt 🇪🇬                                      | El Salvador 🇸🇻 | Equatorial Guinea 🇬🇶 | Eritrea 🇪🇷 |
+| Estonia 🇪🇪                                    | Eswatini 🇸🇿 | Ethiopia 🇪🇹 | Falkland Islands (Malvinas) 🇫🇰 |
+| Faroe Islands 🇫🇴                              | Fiji 🇫🇯 | Finland 🇫🇮 | France 🇫🇷 |
+| French Guiana 🇬🇫                              | French Polynesia 🇵🇫 | Gabon 🇬🇦 | Gambia 🇬🇲 |
+| Georgia 🇬🇪                                    | Germany 🇩🇪 | Ghana 🇬🇭 | Gibraltar 🇬🇮 |
+| Greece 🇬🇷                                     | Greenland 🇬🇱 | Grenada 🇬🇩 | Guadeloupe 🇬🇵 |
+| Guam 🇬🇺                                       | Guatemala 🇬🇹 | Guinea 🇬🇳 | Guinea-Bissau 🇬🇼 |
+| Guyana 🇬🇾                                     | Haiti 🇭🇹 | Honduras 🇭🇳 | Hong Kong 🇭🇰 |
+| Hungary 🇭🇺                                    | Iceland 🇮🇸 | India 🇮🇳 | Indonesia 🇮🇩 |
+| Iran 🇮🇷                                       | Iraq 🇮🇶 | Ireland 🇮🇪 | Israel 🇮🇱 |
+| Italy 🇮🇹                                      | Jamaica 🇯🇲 | Japan 🇯🇵 | Jordan 🇯🇴 |
+| Kazakhstan 🇰🇿                                 | Kenya 🇰🇪 | Kiribati 🇰🇮 | Korea, Republic of 🇰🇷 |
+| Kuwait 🇰🇼                                     | Kyrgyzstan 🇰🇬 | Lao People's Democratic Republic 🇱🇦 | Latvia 🇱🇻 |
+| Lebanon 🇱🇧                                    | Lesotho 🇱🇸 | Liberia 🇱🇷 | Libya 🇱🇾 |
+| Liechtenstein 🇱🇮                              | Lithuania 🇱🇹 | Luxembourg 🇱🇺 | Macao 🇲🇴 |
 | Macedonia, the Former Yugoslav Republic Of 🇲🇰 | Madagascar 🇲🇬 | Malawi 🇲🇼 | Malaysia 🇲🇾 |
-| Maldives 🇲🇻 | Mali 🇲🇱 | Malta 🇲🇹 | Marshall Islands 🇲🇭 |
-| Martinique 🇲🇶 | Mauritania 🇲🇷 | Mauritius 🇲🇺 | Mayotte 🇾🇹 |
-| Mexico 🇲🇽 | Micronesia, Federated States Of 🇫🇲 | Moldova, Republic of 🇲🇩 | Monaco 🇲🇨 |
-| Mongolia 🇲🇳 | Montenegro 🇲🇪 | Montserrat 🇲🇸 | Morocco 🇲🇦 |
-| Mozambique 🇲🇿 | Myanmar 🇲🇲 | Namibia 🇳🇦 | Nauru 🇳🇷 |
-| Nepal 🇳🇵 | Netherlands 🇳🇱 | New Caledonia 🇳🇨 | New Zealand 🇳🇿 |
-| Nicaragua 🇳🇮 | Niger 🇳🇪 | Nigeria 🇳🇬 | Niue 🇳🇺 |
-| Norfolk Island 🇳🇫 | Northern Mariana Islands 🇲🇵 | Norway 🇳🇴 | Oman 🇴🇲 |
-| Pakistan 🇵🇰 | Palau 🇵🇼 | Palestine, State of 🇵🇸 | Panama 🇵🇦 |
-| Papua New Guinea 🇵🇬 | Paraguay 🇵🇾 | Peru 🇵🇪 | Philippines 🇵🇭 |
-| Pitcairn 🇵🇳 | Poland 🇵🇱 | Portugal 🇵🇹 | Puerto Rico 🇵🇷 |
-| Qatar 🇶🇦 | Réunion 🇷🇪 | Romania 🇷🇴 | Russian Federation 🇷🇺 |
-| Rwanda 🇷🇼 | Saint Helena 🇸🇭 | Saint Kitts And Nevis 🇰🇳 | Saint Lucia 🇱🇨 |
-| Saint Pierre And Miquelon 🇵🇲 | Saint Vincent And The Grenedines 🇻🇨 | Samoa 🇼🇸 | San Marino 🇸🇲 |
-| Sao Tome and Principe 🇸🇹 | Saudi Arabia 🇸🇦 | Senegal 🇸🇳 | Serbia 🇷🇸 |
-| Seychelles 🇸🇨 | Sierra Leone 🇸🇱 | Singapore 🇸🇬 | Sint Maarten 🇸🇽 |
-| Slovakia 🇸🇰 | Slovenia 🇸🇮 | Solomon Islands 🇸🇧 | Somalia 🇸🇴 |
-| South Africa 🇿🇦 | South Sudan 🇸🇸 | Spain 🇪🇸 | Sri Lanka 🇱🇰 |
-| Sudan 🇸🇩 | Suriname 🇸🇷 | Sweden 🇸🇪 | Switzerland 🇨🇭 |
-| Syrian Arab Republic 🇸🇾 | Taiwan 🇹🇼 | Tajikistan 🇹🇯 | Tanzania, United Republic of 🇹🇿 |
-| Thailand 🇹🇭 | Timor-Leste 🇹🇱 | Togo 🇹🇬 | Tokelau 🇹🇰 |
-| Tonga 🇹🇴 | Trinidad and Tobago 🇹🇹 | Tunisia 🇹🇳 | Turkey 🇹🇷 |
-| Turkmenistan 🇹🇲 | Turks and Caicos Islands 🇹🇨 | Tuvalu 🇹🇻 | Uganda 🇺🇬 |
-| Ukraine 🇺🇦 | United Arab Emirates 🇦🇪 | United Kingdom 🇬🇧 | United States 🇺🇸 |
-| Uruguay 🇺🇾 | Uzbekistan 🇺🇿 | Vanuatu 🇻🇺 | Venezuela, Bolivarian Republic of 🇻🇪 |
-| Vietnam 🇻🇳 | Virgin Islands, British 🇻🇬 | Virgin Islands, U.S. 🇻🇮 | Wallis and Futuna 🇼🇫 |
-| Yemen 🇾🇪 | Zambia 🇿🇲 | Zimbabwe 🇿🇼 |
+| Maldives 🇲🇻                                   | Mali 🇲🇱 | Malta 🇲🇹 | Marshall Islands 🇲🇭 |
+| Martinique 🇲🇶                                 | Mauritania 🇲🇷 | Mauritius 🇲🇺 | Mexico 🇲🇽 |
+| Micronesia, Federated States Of 🇫🇲            | Moldova, Republic of 🇲🇩 | Monaco 🇲🇨 |
+| Mongolia 🇲🇳                                   | Montenegro 🇲🇪 | Montserrat 🇲🇸 | Morocco 🇲🇦 |
+| Mozambique 🇲🇿                                 | Myanmar 🇲🇲 | Namibia 🇳🇦 | Nauru 🇳🇷 |
+| Nepal 🇳🇵                                      | Netherlands 🇳🇱 | New Caledonia 🇳🇨 | New Zealand 🇳🇿 |
+| Nicaragua 🇳🇮                                  | Niger 🇳🇪 | Nigeria 🇳🇬 | Niue 🇳🇺 |
+| Norfolk Island 🇳🇫                             | Northern Mariana Islands 🇲🇵 | Norway 🇳🇴 | Oman 🇴🇲 |
+| Pakistan 🇵🇰                                   | Palau 🇵🇼 | Panama 🇵🇦 | Papua New Guinea 🇵🇬                           |
+| Paraguay 🇵🇾                                   | Peru 🇵🇪 | Philippines 🇵🇭 | Pitcairn 🇵🇳                                   | 
+| Poland 🇵🇱                                     | Portugal 🇵🇹 | Puerto Rico 🇵🇷 | Qatar 🇶🇦                                      |
+| Réunion 🇷🇪                                    | Romania 🇷🇴 | Russian Federation 🇷🇺 | Rwanda 🇷🇼                                     |
+| Saint Helena 🇸🇭                               | Saint Kitts And Nevis 🇰🇳 | Saint Lucia 🇱🇨 |  Saint Pierre And Miquelon 🇵🇲                  |
+| Saint Vincent And The Grenedines 🇻🇨           | Samoa 🇼🇸 | San Marino 🇸🇲 | Sao Tome and Principe 🇸🇹                      | 
+| Saudi Arabia 🇸🇦                               | Senegal 🇸🇳 | Serbia 🇷🇸 | Seychelles 🇸🇨                                 | 
+| Sierra Leone 🇸🇱                               | Singapore 🇸🇬 | Sint Maarten 🇸🇽 | Slovakia 🇸🇰                                   | 
+| Slovenia 🇸🇮                                   | Solomon Islands 🇸🇧 | Somalia 🇸🇴 | South Africa 🇿🇦                               | 
+| South Sudan 🇸🇸                                | Spain 🇪🇸 | Sri Lanka 🇱🇰 | Sudan 🇸🇩                                      |
+| Suriname 🇸🇷                                   | Sweden 🇸🇪 | Switzerland 🇨🇭 | Syrian Arab Republic 🇸🇾                       |
+| Taiwan 🇹🇼                                     | Tajikistan 🇹🇯 | Tanzania, United Republic of 🇹🇿 | Thailand 🇹🇭                                   | 
+| Timor-Leste 🇹🇱                                | Togo 🇹🇬 | Tokelau 🇹🇰 | Tonga 🇹🇴                                      | 
+| Trinidad and Tobago 🇹🇹                        | Tunisia 🇹🇳 | Turkey 🇹🇷 | Turkmenistan 🇹🇲                               | 
+| Turks and Caicos Islands 🇹🇨                   | Tuvalu 🇹🇻 | Uganda 🇺🇬 | Ukraine 🇺🇦                                    | 
+| United Arab Emirates 🇦🇪                       | United Kingdom 🇬🇧 | United States 🇺🇸 | Uruguay 🇺🇾                                    | 
+| Uzbekistan 🇺🇿                                 | Vanuatu 🇻🇺 | Venezuela, Bolivarian Republic of 🇻🇪 | Vietnam 🇻🇳                                    |
+| Virgin Islands, British 🇻🇬                    | Virgin Islands, U.S. 🇻🇮 | Wallis and Futuna 🇼🇫 |  Yemen 🇾🇪                                      |
+| Zambia 🇿🇲                                     | Zimbabwe 🇿🇼 |
 ## Credits
 
 1. Validating that the generated phone number is valid & following the E.164 format - [libphonenumber-js](https://gitlab.com/catamphetamine/libphonenumber-js)

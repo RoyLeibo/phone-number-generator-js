@@ -1693,14 +1693,6 @@ export const countryPhoneDataArray: CountryPhoneData[] = [
     phone_number_lengths: [9, 10, 8],
   },
   {
-    alpha2: "YT",
-    alpha3: "MYT",
-    country_code: "262",
-    country_name: "Mayotte",
-    mobile_begin_with: ["639"],
-    phone_number_lengths: [9],
-  },
-  {
     alpha2: "NA",
     alpha3: "NAM",
     country_code: "264",
