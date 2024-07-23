@@ -1397,14 +1397,6 @@ export const countryPhoneDataArray: CountryPhoneData[] = [
     phone_number_lengths: [8, 9],
   },
   {
-    alpha2: "KI",
-    alpha3: "KIR",
-    country_code: "686",
-    country_name: "Kiribati",
-    mobile_begin_with: ["9", "30"],
-    phone_number_lengths: [5],
-  },
-  {
     alpha2: "KN",
     alpha3: "KNA",
     country_code: "1",
@@ -2258,14 +2250,6 @@ export const countryPhoneDataArray: CountryPhoneData[] = [
     country_code: "1",
     country_name: "Saint Vincent And The Grenedines",
     mobile_begin_with: ["784"],
-    phone_number_lengths: [10],
-  },
-  {
-    alpha2: "VE",
-    alpha3: "VEN",
-    country_code: "58",
-    country_name: "Venezuela, Bolivarian Republic of",
-    mobile_begin_with: ["4"],
     phone_number_lengths: [10],
   },
   {

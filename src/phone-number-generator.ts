@@ -1,7 +1,9 @@
 import { CountryCode, isValidNumberForRegion, isValidPhoneNumber } from "libphonenumber-js";
+import {isPhoneNumber} from 'class-validator';
 import { random, sample } from "lodash";
 import { CountryPhoneDataConfig } from "./config";
 import { CountryPhoneData, countryPhoneDataArray } from "./countryPhoneData";
+
 
 export default function generatePhoneNumber(
   config?: CountryPhoneDataConfig
@@ -11,7 +13,7 @@ export default function generatePhoneNumber(
       getCountryPhoneDataByConfig(config);
     for (let j = 0; j < 100; j++) {
       const phoneNumber = getRandomPhoneNumber(countryPhoneData, config?.withoutCountryCode);
-      if (config?.withoutCountryCode ? isValidNumberForRegion(phoneNumber, countryPhoneData.alpha2 as CountryCode) : isValidPhoneNumber(phoneNumber)) {
+      if (config?.withoutCountryCode ? isValidNumberForRegion(phoneNumber, countryPhoneData.alpha2 as CountryCode) : isPhoneNumber(phoneNumber)) {
         return phoneNumber;
       }
     }

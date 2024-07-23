@@ -1,7 +1,8 @@
-import { CountryCode, isValidNumberForRegion, isValidPhoneNumber } from "libphonenumber-js";
+import { CountryCode, isValidNumberForRegion } from "libphonenumber-js";
 import { CountryNames } from "../src/config";
 import { countryPhoneDataArray } from "../src/countryPhoneData";
 import { generatePhoneNumber } from "../src/index";
+import {isPhoneNumber} from 'class-validator';
 
 describe("generatePhoneNumber", () => {
   it.each(Array.from(Array(100000)))(
@@ -10,7 +11,7 @@ describe("generatePhoneNumber", () => {
       const startTime = Date.now();
       const phoneNumber = generatePhoneNumber();
       const endTime = Date.now();
-      expect(isValidPhoneNumber(phoneNumber)).toBeTruthy();
+      expect(isPhoneNumber(phoneNumber)).toBeTruthy();
       expect(endTime - startTime).toBeLessThan(100);
     }
   );
@@ -24,7 +25,7 @@ describe("generatePhoneNumber", () => {
       expect(
         phoneNumber.startsWith(`+${countryPhoneData.country_code}`)
       ).toBeTruthy();
-      expect(isValidPhoneNumber(phoneNumber)).toBeTruthy();
+      expect(isPhoneNumber(phoneNumber)).toBeTruthy();
     }
   );
 
@@ -42,7 +43,7 @@ describe("generatePhoneNumber", () => {
       countryName: CountryNames.Austria
     });
     expect(phoneNumber.startsWith("+43")).toBeTruthy();
-    expect(isValidPhoneNumber(phoneNumber)).toBeTruthy();
+    expect(isPhoneNumber(phoneNumber)).toBeTruthy();
   });
 
   it("Should create phone number without country code", () => {
