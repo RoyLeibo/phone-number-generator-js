@@ -1,6 +1,6 @@
 {
   "name": "phone-number-generator-js",
-  "version": "1.2.9",
+  "version": "1.2.10",
   "description": "Generates a random phone number following the E.164 international standard",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
