@@ -50,12 +50,12 @@ generatePhoneNumber(); // '+85265698900'
 generatePhoneNumber({ countryName: CountryNames.Austria }); // '+436508162890'
 ```
 
-#### Using withCountryCode flag (defaults to true)
+#### Using withoutCountryCode flag (defaults to false)
 
 ```javascript
 generatePhoneNumber({
   countryName: CountryNames.Austria,
-  withCountryCode: false,
+  withoutCountryCode: true,
 }); // '5483746575'
 ```
 
