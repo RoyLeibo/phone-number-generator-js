@@ -3,8 +3,18 @@ import { CountryNames } from "../src/config";
 import { countryPhoneDataArray } from "../src/countryPhoneData";
 import { generatePhoneNumber } from "../src/index";
 import {isPhoneNumber} from 'class-validator';
+import {invalidNumbers} from '../src/utils'
+import { isPhoneNumberValid } from "../src/phone-number-generator";
+
 
 describe("generatePhoneNumber", () => {
+  it.each(invalidNumbers)(
+    "Should fail validate phonen number: $invalid_number",
+    (invalidNumber) => {
+      expect(isPhoneNumberValid(invalidNumber)).toBeFalsy();
+    }
+  );
+
   it.each(Array.from(Array(100000)))(
     "Should succeed generating phone number",
     () => {
@@ -31,7 +41,6 @@ describe("generatePhoneNumber", () => {
 
   it("Should throw error for not existing country name", () => {
     expect(() =>
-
       generatePhoneNumber({
         countryName: 'SSS' as CountryNames,
       })
