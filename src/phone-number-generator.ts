@@ -13,7 +13,7 @@ export default function generatePhoneNumber(
       getCountryPhoneDataByConfig(config);
     for (let j = 0; j < 1000; j++) {
       const phoneNumber = getRandomPhoneNumber(countryPhoneData, config?.withoutCountryCode);
-      if (!invalidNumbers.includes(phoneNumber) && isPhoneNumberValid(phoneNumber,countryPhoneData,config?.withoutCountryCode)) {
+      if (isPhoneNumberValid(phoneNumber,countryPhoneData,config?.withoutCountryCode)) {
         return phoneNumber;
       }
     }
