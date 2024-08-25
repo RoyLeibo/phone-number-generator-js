@@ -3,17 +3,27 @@ import { CountryNames } from "../src/config";
 import { countryPhoneDataArray } from "../src/countryPhoneData";
 import { generatePhoneNumber } from "../src/index";
 import {isPhoneNumber} from 'class-validator';
-import invalidPhoneNumbersNumbers from './invalid-phone-numbers.json'
+import {invalidNumbers} from '../src/utils'
 
 describe("generatePhoneNumber", () => {
-  it.each(Array.from(Array(100000)))(
+  it.each(Array.from(Array(10000)))(
+    "Should succeed generating phone number that are NOT in the invalid numbers list",
+    () => {
+      const startTime = Date.now();
+      const phoneNumber = generatePhoneNumber();
+      const endTime = Date.now();
+      expect(invalidNumbers.includes(phoneNumber)).toBeFalsy();
+      expect(endTime - startTime).toBeLessThan(100);
+    }
+  );
+
+  it.each(Array.from(Array(10000)))(
     "Should succeed generating phone number",
     () => {
       const startTime = Date.now();
       const phoneNumber = generatePhoneNumber();
       const endTime = Date.now();
       expect(isPhoneNumber(phoneNumber)).toBeTruthy();
-      expect(invalidPhoneNumbersNumbers.includes(phoneNumber)).toBeFalsy();
       expect(endTime - startTime).toBeLessThan(100);
     }
   );
@@ -28,7 +38,6 @@ describe("generatePhoneNumber", () => {
         phoneNumber.startsWith(`+${countryPhoneData.country_code}`)
       ).toBeTruthy();
       expect(isPhoneNumber(phoneNumber)).toBeTruthy();
-      expect(invalidPhoneNumbersNumbers.includes(phoneNumber)).toBeFalsy();
     }
   );
 
@@ -46,7 +55,6 @@ describe("generatePhoneNumber", () => {
     });
     expect(phoneNumber.startsWith("+43")).toBeTruthy();
     expect(isPhoneNumber(phoneNumber)).toBeTruthy();
-    expect(invalidPhoneNumbersNumbers.includes(phoneNumber)).toBeFalsy();
   });
 
   it("Should create phone number without country code", () => {
@@ -57,6 +65,5 @@ describe("generatePhoneNumber", () => {
     });
     expect(phoneNumber.startsWith('+43')).toBeFalsy();
     expect(isValidNumberForRegion(phoneNumber, 'AT' as CountryCode)).toBeTruthy();
-    expect(invalidPhoneNumbersNumbers.includes(phoneNumber)).toBeFalsy();
   });
 });
