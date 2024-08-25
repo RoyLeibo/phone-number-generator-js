@@ -21,7 +21,6 @@ export default function generatePhoneNumber(
       break;
     }
   }
-
   throw new Error("Failed to generate phone number");
 }
 
