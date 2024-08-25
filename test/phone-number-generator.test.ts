@@ -4,20 +4,18 @@ import { countryPhoneDataArray } from "../src/countryPhoneData";
 import { generatePhoneNumber } from "../src/index";
 import {isPhoneNumber} from 'class-validator';
 import {invalidNumbers} from '../src/utils'
+import { isPhoneNumberValid } from "../src/phone-number-generator";
+
 
 describe("generatePhoneNumber", () => {
-  it.each(Array.from(Array(10000)))(
-    "Should succeed generating phone number that are NOT in the invalid numbers list",
-    () => {
-      const startTime = Date.now();
-      const phoneNumber = generatePhoneNumber();
-      const endTime = Date.now();
-      expect(invalidNumbers.includes(phoneNumber)).toBeFalsy();
-      expect(endTime - startTime).toBeLessThan(100);
+  it.each(invalidNumbers)(
+    "Should fail validate phonen number: $invalid_number",
+    (invalidNumber) => {
+      expect(isPhoneNumberValid(invalidNumber)).toBeFalsy();
     }
   );
 
-  it.each(Array.from(Array(10000)))(
+  it.each(Array.from(Array(100000)))(
     "Should succeed generating phone number",
     () => {
       const startTime = Date.now();

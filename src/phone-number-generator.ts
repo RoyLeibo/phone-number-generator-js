@@ -3,6 +3,7 @@ import {isPhoneNumber} from 'class-validator';
 import { random, sample } from "lodash";
 import { CountryPhoneDataConfig } from "./config";
 import { CountryPhoneData, countryPhoneDataArray } from "./countryPhoneData";
+import { invalidNumbers } from "./utils";
 
 export default function generatePhoneNumber(
   config?: CountryPhoneDataConfig
@@ -12,7 +13,7 @@ export default function generatePhoneNumber(
       getCountryPhoneDataByConfig(config);
     for (let j = 0; j < 1000; j++) {
       const phoneNumber = getRandomPhoneNumber(countryPhoneData, config?.withoutCountryCode);
-      if (isPhoneNumberValid(phoneNumber,countryPhoneData,config?.withoutCountryCode)) {
+      if (!invalidNumbers.includes(phoneNumber) && isPhoneNumberValid(phoneNumber,countryPhoneData,config?.withoutCountryCode)) {
         return phoneNumber;
       }
     }
@@ -22,13 +23,13 @@ export default function generatePhoneNumber(
   }
   throw new Error("Failed to generate phone number");
 }
-function isPhoneNumberValid(
+export function isPhoneNumberValid(
   phoneNumber: string, 
-  countryPhoneData: CountryPhoneData, 
+  countryPhoneData?: CountryPhoneData, 
   withoutCountryCode?: boolean
 ): boolean {
   if (withoutCountryCode) {
-    return isValidNumberForRegion(phoneNumber, countryPhoneData.alpha2 as CountryCode);
+    return countryPhoneData !== undefined && isValidNumberForRegion(phoneNumber, countryPhoneData.alpha2 as CountryCode);
   }
   return isValidPhoneNumber(phoneNumber) && isPhoneNumber(phoneNumber);
 }
