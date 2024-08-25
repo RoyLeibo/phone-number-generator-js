@@ -34,7 +34,6 @@ describe("generatePhoneNumber", () => {
 
   it("Should throw error for not existing country name", () => {
     expect(() =>
-
       generatePhoneNumber({
         countryName: 'SSS' as CountryNames,
       })
