@@ -1713,8 +1713,8 @@ export const countryPhoneDataArray: CountryPhoneData[] = [
     alpha3: "NFK",
     country_code: "672",
     country_name: "Norfolk Island",
-    mobile_begin_with: ["5", "8"],
-    phone_number_lengths: [5],
+    mobile_begin_with: ["14", "35", "38"],
+    phone_number_lengths: [6],
   },
   {
     alpha2: "NG",
