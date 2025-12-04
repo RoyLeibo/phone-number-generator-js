@@ -7,5 +7,4 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
   },
-  plugins: ['@nrwl/nx'],
 }
