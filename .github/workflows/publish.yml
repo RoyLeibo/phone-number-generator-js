@@ -14,6 +14,9 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     
+    # Only allow the repository owner to trigger this workflow
+    if: github.actor == github.repository_owner || github.actor == 'RoyLeibo'
+    
     permissions:
       contents: write
       id-token: write
@@ -33,6 +36,23 @@ jobs:
       
       - name: Install dependencies
         run: npm ci
+      
+      - name: Get current package version
+        id: current-version
+        run: echo "VERSION=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
+      
+      - name: Check if version exists on npm
+        id: version-check
+        run: |
+          PACKAGE_NAME=$(node -p "require('./package.json').name")
+          NPM_VERSION=$(npm view $PACKAGE_NAME@${{ steps.current-version.outputs.VERSION }} version 2>/dev/null || echo "not-found")
+          if [ "$NPM_VERSION" != "not-found" ]; then
+            echo "ERROR: Version ${{ steps.current-version.outputs.VERSION }} already exists on npm!"
+            echo "Please bump the version in package.json before publishing."
+            exit 1
+          fi
+          echo "Version check passed - ${{ steps.current-version.outputs.VERSION }} is new"
+        continue-on-error: false
       
       - name: Run tests
         run: npm test
