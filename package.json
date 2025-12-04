@@ -18,7 +18,9 @@
     "clean": "node tools/cleanup",
     "package": "npm run build && npm pack",
     "test": "jest --no-cache --runInBand",
-    "test:cov": "jest --coverage --no-cache --runInBand"
+    "test:cov": "jest --coverage --no-cache --runInBand",
+    "lint": "eslint src/**/*.ts test/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts test/**/*.ts --fix"
   },
   "publishConfig": {
     "access": "public"
@@ -27,17 +29,24 @@
     "dist"
   ],
   "keywords": [
-    "example",
+    "phone",
+    "phone-number",
+    "phone-number-generator",
+    "random-phone",
+    "e164",
+    "telephone",
+    "mobile-number",
+    "generator",
+    "faker",
+    "test-data",
+    "mock-data",
+    "validation",
+    "international-phone",
+    "country-code",
+    "libphonenumber",
     "typescript",
-    "npm",
-    "package",
-    "sample",
-    "boilerplate",
-    "starter",
-    "demo",
-    "cjs",
-    "esm",
-    "umd"
+    "testing",
+    "random"
   ],
   "license": "MIT",
   "addscope": "@RoyLeibo",
