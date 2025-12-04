@@ -23,6 +23,28 @@ export default function generatePhoneNumber(
   }
   throw new Error("Failed to generate phone number");
 }
+
+export function generatePhoneNumbers(
+  count: number,
+  config?: CountryPhoneDataConfig
+): string[] {
+  if (count <= 0) {
+    throw new Error("Count must be greater than 0");
+  }
+  
+  if (count > 10000) {
+    throw new Error("Count exceeds maximum allowed (10000)");
+  }
+
+  const phoneNumbers: string[] = [];
+  
+  for (let i = 0; i < count; i++) {
+    phoneNumbers.push(generatePhoneNumber(config));
+  }
+  
+  return phoneNumbers;
+}
+
 export function isPhoneNumberValid(
   phoneNumber: string, 
   countryPhoneData?: CountryPhoneData, 

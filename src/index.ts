@@ -1,6 +1,6 @@
-import generatePhoneNumber from './phone-number-generator'
+import generatePhoneNumber, { generatePhoneNumbers, isPhoneNumberValid } from './phone-number-generator'
 import { CountryPhoneDataConfig, CountryNames } from './config'
 
-export { generatePhoneNumber }
+export { generatePhoneNumber, generatePhoneNumbers, isPhoneNumberValid }
 
 export { CountryPhoneDataConfig, CountryNames } 

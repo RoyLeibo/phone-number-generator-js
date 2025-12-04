@@ -10,6 +10,27 @@ It supports a wide range of countries, with a total of 227 supported countries, 
 
 By default, if no configuration is provided, a totally random phone number will be generated from any of the 226 supported countries.
 
+## Features
+
+✨ **Generate single or multiple phone numbers** - Create one number or batch generate thousands  
+🌍 **227 countries supported** - Generate valid numbers for any region worldwide  
+📱 **E.164 format compliance** - All numbers follow international standards  
+✅ **Built-in validation** - Every generated number is validated using libphonenumber-js  
+⚙️ **Flexible configuration** - Generate with or without country codes  
+🎯 **Country-specific generation** - Target specific countries for localized testing  
+🚀 **High performance** - Generate thousands of numbers in seconds  
+📦 **Multiple formats** - Available as CJS, ESM, and UMD modules  
+💪 **TypeScript support** - Fully typed for excellent IDE support
+
+## Use Cases
+
+🧪 **Testing & QA** - Generate test data for phone number validation  
+📊 **Database Seeding** - Populate databases with realistic phone numbers  
+🔄 **Load Testing** - Create large datasets for performance testing  
+🎭 **Mock Data** - Generate sample data for demos and prototypes  
+📝 **Form Testing** - Automate form filling with valid phone numbers  
+🌐 **Multi-region Testing** - Test applications across different countries  
+
 ### Relevant links:
 
 - [E.164 format definition](https://en.wikipedia.org/wiki/E.164)
@@ -29,20 +50,39 @@ yarn add phone-number-generator-js
 ## Usage
 
 ```javascript
-const { generatePhoneNumber } = require("phone-number-generator-js");
+const { generatePhoneNumber, generatePhoneNumbers } = require("phone-number-generator-js");
 
 // or
 
-import { generatePhoneNumber } from "phone-number-generator-js";
+import { generatePhoneNumber, generatePhoneNumbers } from "phone-number-generator-js";
 ```
 
-### 1. Simple usage
+### 1. Generate a single phone number
 
 ```javascript
 generatePhoneNumber(); // '+85265698900'
 ```
 
-### 2. With config
+### 2. Generate multiple phone numbers (batch generation)
+
+```javascript
+// Generate 10 random phone numbers
+generatePhoneNumbers(10);
+// Returns: ['+85265698900', '+436508162890', '+12125551234', ...]
+
+// Generate 5 phone numbers from a specific country
+generatePhoneNumbers(5, { countryName: CountryNames.United_States });
+// Returns: ['+12125551234', '+13105555678', '+14155559876', ...]
+
+// Generate multiple numbers without country code
+generatePhoneNumbers(3, {
+  countryName: CountryNames.Austria,
+  withoutCountryCode: true,
+});
+// Returns: ['6501234567', '6509876543', '6503456789']
+```
+
+### 3. With config
 
 #### Using countryName enum
 
