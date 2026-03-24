@@ -89,19 +89,19 @@ function getRandomNumberInLength(length: number): number {
 function getCountryPhoneDataByConfig(
   config: CountryPhoneDataConfig = {}
 ): CountryPhoneData {
-  let countryPhoneData!: CountryPhoneData;
-
   if (!config || !config.countryName) {
-    countryPhoneData = sample(countryPhoneDataArray)!;
-  } else {
-    countryPhoneData =
-      countryPhoneDataArray.find(
-        (countryPhoneData) => countryPhoneData.country_name === config.countryName
-      ) ?? (() => {
-        throw new Error(`Invalid country name`);
-      })();
-
+    const randomCountry = sample(countryPhoneDataArray);
+    if (!randomCountry) {
+      throw new Error("No country phone data available");
+    }
+    return randomCountry;
   }
 
-  return countryPhoneData;
+  const match = countryPhoneDataArray.find(
+    (entry) => entry.country_name === config.countryName
+  );
+  if (!match) {
+    throw new Error(`Invalid country name`);
+  }
+  return match;
 }

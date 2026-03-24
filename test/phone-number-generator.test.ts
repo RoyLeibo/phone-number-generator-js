@@ -1,3 +1,5 @@
+import * as fs from "fs";
+import * as path from "path";
 import { CountryCode, isValidNumberForRegion } from "libphonenumber-js";
 import { CountryNames } from "../src/config";
 import { countryPhoneDataArray } from "../src/countryPhoneData";
@@ -62,6 +64,48 @@ describe("generatePhoneNumber", () => {
     });
     expect(phoneNumber.startsWith('+43')).toBeFalsy();
     expect(isValidNumberForRegion(phoneNumber, 'AT' as CountryCode)).toBeTruthy();
+  });
+});
+
+describe("ESM build output", () => {
+  const distEsm = path.resolve(__dirname, "../dist/esm");
+
+  it("Should have .js extensions on all relative imports in ESM index", () => {
+    const indexContent = fs.readFileSync(path.join(distEsm, "index.js"), "utf8");
+    const relativeImports = indexContent.match(/from\s+['"]\.\/[^'"]+['"]/g) || [];
+    expect(relativeImports.length).toBeGreaterThan(0);
+    relativeImports.forEach((imp) => {
+      expect(imp).toMatch(/\.js['"]/);
+    });
+  });
+
+  it("Should have .js extensions on all relative imports in ESM phone-number-generator", () => {
+    const content = fs.readFileSync(path.join(distEsm, "phone-number-generator.js"), "utf8");
+    const relativeImports = content.match(/from\s+['"]\.\/[^'"]+['"]/g) || [];
+    expect(relativeImports.length).toBeGreaterThan(0);
+    relativeImports.forEach((imp) => {
+      expect(imp).toMatch(/\.js['"]/);
+    });
+  });
+});
+
+describe("Package exports configuration", () => {
+  it("Should have typesVersions wildcard to prevent deep path auto-imports", () => {
+    const pkg = JSON.parse(
+      fs.readFileSync(path.resolve(__dirname, "../package.json"), "utf8")
+    );
+    expect(pkg.typesVersions["*"]["*"]).toBeDefined();
+    expect(pkg.typesVersions["*"]["*"]).toContain("./dist/types/index.d.ts");
+  });
+
+  it("Should have exports field restricting entry points", () => {
+    const pkg = JSON.parse(
+      fs.readFileSync(path.resolve(__dirname, "../package.json"), "utf8")
+    );
+    expect(pkg.exports["."]).toBeDefined();
+    expect(pkg.exports["."].types).toBe("./dist/types/index.d.ts");
+    expect(pkg.exports["."].import).toBe("./dist/esm/index.js");
+    expect(pkg.exports["."].require).toBe("./dist/cjs/index.js");
   });
 });
 
