@@ -9,6 +9,9 @@ module.exports = {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
       './config/fileTransformer.js',
   },
+  moduleNameMapper: {
+    '^(\\.{1,2}/.*)\\.js$': '$1',
+  },
   globals: {
     'ts-jest': {
       tsconfig: 'tsconfig.json'

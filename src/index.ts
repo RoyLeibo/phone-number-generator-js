@@ -1,5 +1,5 @@
-import generatePhoneNumber, { generatePhoneNumbers, isPhoneNumberValid } from './phone-number-generator'
-import { CountryPhoneDataConfig, CountryNames } from './config'
+import generatePhoneNumber, { generatePhoneNumbers, isPhoneNumberValid } from './phone-number-generator.js'
+import { CountryPhoneDataConfig, CountryNames } from './config.js'
 
 export { generatePhoneNumber, generatePhoneNumbers, isPhoneNumberValid }
 

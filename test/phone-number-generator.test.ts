@@ -65,6 +65,42 @@ describe("generatePhoneNumber", () => {
   });
 });
 
+describe("Country name normalization", () => {
+  it.each([
+    { newKey: "Vietnam", oldKey: "Viet_Nam", code: "+84" },
+    { newKey: "Iran", oldKey: null, code: "+98" },
+    { newKey: "South_Korea", oldKey: "Republic_of_Korea", code: "+82" },
+    { newKey: "Laos", oldKey: "Lao_People's_Democratic_Republic", code: "+856" },
+    { newKey: "Libya", oldKey: "Libyan_Arab_Jamahiriya", code: "+218" },
+    { newKey: "Syria", oldKey: "Syrian_Arab_Republic", code: "+963" },
+    { newKey: "North_Macedonia", oldKey: "Macedonia", code: "+389" },
+    { newKey: "Micronesia", oldKey: "Federated_States_Of_Micronesia", code: "+691" },
+    { newKey: "Tanzania", oldKey: "United_Republic_of_Tanzania", code: "+255" },
+    { newKey: "Moldova", oldKey: "Republic_of_Moldova", code: "+373" },
+    { newKey: "DR_Congo", oldKey: "The_Democratic_Republic_Of_The_Congo", code: "+243" },
+  ])(
+    "Should generate phone number for $newKey (code $code)",
+    ({ newKey, oldKey, code }) => {
+      const phoneNumber = generatePhoneNumber({
+        countryName: CountryNames[newKey as keyof typeof CountryNames],
+      });
+      expect(phoneNumber.startsWith(code)).toBeTruthy();
+      expect(isPhoneNumberValid(phoneNumber)).toBeTruthy();
+
+      if (oldKey) {
+        const oldPhoneNumber = generatePhoneNumber({
+          countryName: CountryNames[oldKey as keyof typeof CountryNames],
+        });
+        expect(oldPhoneNumber.startsWith(code)).toBeTruthy();
+        expect(isPhoneNumberValid(oldPhoneNumber)).toBeTruthy();
+        expect(CountryNames[newKey as keyof typeof CountryNames]).toBe(
+          CountryNames[oldKey as keyof typeof CountryNames]
+        );
+      }
+    }
+  );
+});
+
 describe("generatePhoneNumbers", () => {
   it("Should generate multiple phone numbers", () => {
     const count = 10;

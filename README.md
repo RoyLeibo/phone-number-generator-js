@@ -136,7 +136,7 @@ yarn build
 | Chile 🇨🇱                                      | China 🇨🇳                            | Colombia 🇨🇴                         | Comoros 🇰🇲                     |
 | Congo 🇨🇩                                      | Cook Islands 🇨🇰                     | Costa Rica 🇨🇷                       | Côte D'Ivoire 🇨🇮               |
 | Croatia 🇭🇷                                    | Cuba 🇨🇺                             | Curaçao 🇨🇼                          | Cyprus 🇨🇾                      |
-| Czech Republic 🇨🇿                             | Democratic Republic of the Congo 🇨🇩 | Denmark 🇩🇰                          | Djibouti 🇩🇯                    |
+| Czech Republic 🇨🇿                             | DR Congo 🇨🇩                        | Denmark 🇩🇰                          | Djibouti 🇩🇯                    |
 | Dominica 🇩🇲                                   | Dominican Republic 🇩🇴               | East Timor 🇹🇱                       | Ecuador 🇪🇨                     |
 | Egypt 🇪🇬                                      | El Salvador 🇸🇻                      | Equatorial Guinea 🇬🇶                | Eritrea 🇪🇷                     |
 | Estonia 🇪🇪                                    | Eswatini 🇸🇿                         | Ethiopia 🇪🇹                         | Falkland Islands (Malvinas) 🇫🇰 |
@@ -149,14 +149,14 @@ yarn build
 | Hungary 🇭🇺                                    | Iceland 🇮🇸                          | India 🇮🇳                            | Indonesia 🇮🇩                   |
 | Iran 🇮🇷                                       | Iraq 🇮🇶                             | Ireland 🇮🇪                          | Israel 🇮🇱                      |
 | Italy 🇮🇹                                      | Jamaica 🇯🇲                          | Japan 🇯🇵                            | Jordan 🇯🇴                      |
-| Kazakhstan 🇰🇿                                 | Kenya 🇰🇪                            | Korea, Republic of 🇰🇷               |
-| Kuwait 🇰🇼                                     | Kyrgyzstan 🇰🇬                       | Lao People's Democratic Republic 🇱🇦 | Latvia 🇱🇻                      |
+| Kazakhstan 🇰🇿                                 | Kenya 🇰🇪                            | South Korea 🇰🇷                       |
+| Kuwait 🇰🇼                                     | Kyrgyzstan 🇰🇬                       | Laos 🇱🇦                              | Latvia 🇱🇻                      |
 | Lebanon 🇱🇧                                    | Lesotho 🇱🇸                          | Liberia 🇱🇷                          | Libya 🇱🇾                       |
 | Liechtenstein 🇱🇮                              | Lithuania 🇱🇹                        | Luxembourg 🇱🇺                       | Macao 🇲🇴                       |
-| Macedonia, the Former Yugoslav Republic Of 🇲🇰 | Madagascar 🇲🇬                       | Malawi 🇲🇼                           | Malaysia 🇲🇾                    |
+| North Macedonia 🇲🇰                            | Madagascar 🇲🇬                       | Malawi 🇲🇼                           | Malaysia 🇲🇾                    |
 | Maldives 🇲🇻                                   | Mali 🇲🇱                             | Malta 🇲🇹                            | Marshall Islands 🇲🇭            |
 | Martinique 🇲🇶                                 | Mauritania 🇲🇷                       | Mauritius 🇲🇺                        | Mexico 🇲🇽                      |
-| Micronesia, Federated States Of 🇫🇲            | Moldova, Republic of 🇲🇩             | Monaco 🇲🇨                           |
+| Micronesia 🇫🇲                                 | Moldova 🇲🇩                          | Monaco 🇲🇨                           |
 | Mongolia 🇲🇳                                   | Montenegro 🇲🇪                       | Montserrat 🇲🇸                       | Morocco 🇲🇦                     |
 | Mozambique 🇲🇿                                 | Myanmar 🇲🇲                          | Namibia 🇳🇦                          | Nauru 🇳🇷                       |
 | Nepal 🇳🇵                                      | Netherlands 🇳🇱                      | New Caledonia 🇳🇨                    | New Zealand 🇳🇿                 |
@@ -172,8 +172,8 @@ yarn build
 | Sierra Leone 🇸🇱                               | Singapore 🇸🇬                        | Sint Maarten 🇸🇽                     | Slovakia 🇸🇰                    |
 | Slovenia 🇸🇮                                   | Solomon Islands 🇸🇧                  | Somalia 🇸🇴                          | South Africa 🇿🇦                |
 | South Sudan 🇸🇸                                | Spain 🇪🇸                            | Sri Lanka 🇱🇰                        | Sudan 🇸🇩                       |
-| Suriname 🇸🇷                                   | Sweden 🇸🇪                           | Switzerland 🇨🇭                      | Syrian Arab Republic 🇸🇾        |
-| Taiwan 🇹🇼                                     | Tajikistan 🇹🇯                       | Tanzania, United Republic of 🇹🇿     | Thailand 🇹🇭                    |
+| Suriname 🇸🇷                                   | Sweden 🇸🇪                           | Switzerland 🇨🇭                      | Syria 🇸🇾                        |
+| Taiwan 🇹🇼                                     | Tajikistan 🇹🇯                       | Tanzania 🇹🇿                         | Thailand 🇹🇭                    |
 | Timor-Leste 🇹🇱                                | Togo 🇹🇬                             | Tokelau 🇹🇰                          | Tonga 🇹🇴                       |
 | Trinidad and Tobago 🇹🇹                        | Tunisia 🇹🇳                          | Turkey 🇹🇷                           | Turkmenistan 🇹🇲                |
 | Turks and Caicos Islands 🇹🇨                   | Tuvalu 🇹🇻                           | Uganda 🇺🇬                           | Ukraine 🇺🇦                     |
