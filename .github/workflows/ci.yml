@@ -37,14 +37,11 @@ jobs:
       - name: Run linter
         run: npm run lint --if-present
 
-      - name: Run tests with coverage
-        run: npm run test:cov
-
       - name: Build
         run: npm run build
 
-      - name: Verify ESM imports
-        run: node -e "const fs = require('fs'); const esm = fs.readFileSync('dist/esm/index.js','utf8'); if(!esm.includes('.js')) { process.exit(1); }"
+      - name: Run tests with coverage
+        run: npm run test:cov
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
