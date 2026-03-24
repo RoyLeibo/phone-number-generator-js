@@ -53,11 +53,11 @@ jobs:
           echo "Version check passed - ${{ steps.current-version.outputs.VERSION }} is new"
         continue-on-error: false
 
-      - name: Run tests
-        run: npm test
-
       - name: Build
         run: npm run build
+
+      - name: Run tests
+        run: npm test
 
       - name: Bump version (if specified)
         if: github.event.inputs.version != ''
